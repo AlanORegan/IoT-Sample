@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		238A0E4BFFC4B77AF354449C /* Pods_IoTSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792128D346D9C27EE4B1A5AC /* Pods_IoTSampleSwift.framework */; };
+		A62CEE5B1BF3B50800E9C895 /* SubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A62CEE5A1BF3B50800E9C895 /* SubscribeViewController.swift */; };
+		A6867C941BF530A700956B68 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6867C931BF530A700956B68 /* Constants.swift */; };
+		A6B39BB51BF3A93600045F73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B39BB41BF3A93600045F73 /* AppDelegate.swift */; };
+		A6B39BB71BF3A93600045F73 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B39BB61BF3A93600045F73 /* ConnectionViewController.swift */; };
+		A6B39BB91BF3A93600045F73 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6B39BB81BF3A93600045F73 /* PinViewController.swift */; };
+		A6B39BBC1BF3A93600045F73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6B39BBA1BF3A93600045F73 /* Main.storyboard */; };
+		A6B39BBE1BF3A93600045F73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6B39BBD1BF3A93600045F73 /* Assets.xcassets */; };
+		A6B39BC11BF3A93600045F73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6B39BBF1BF3A93600045F73 /* LaunchScreen.storyboard */; };
+		A6CC2A291BFFCB6F00635393 /* IoTSampleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC2A281BFFCB6F00635393 /* IoTSampleTabBarController.swift */; };
+		A6E263221C06870D0032B28D /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E263211C06870D0032B28D /* ConfigurationViewController.swift */; };
+		E730138B1DA3788F00468B1E /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013871DA3788F00468B1E /* Pin.swift */; };
+		E730138C1DA3788F00468B1E /* PinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013881DA3788F00468B1E /* PinTableViewCell.swift */; };
+		E730138D1DA3788F00468B1E /* PinTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013891DA3788F00468B1E /* PinTableViewSource.swift */; };
+		E730138F1DA3797900468B1E /* TableViewRefreshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E730138E1DA3797900468B1E /* TableViewRefreshProtocol.swift */; };
+		E73013911DA38DB400468B1E /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013901DA38DB400468B1E /* AppSettings.swift */; };
+		E73013931DA3E12300468B1E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013921DA3E12300468B1E /* SwiftyJSON.swift */; };
+		E7E0DAC61DA413D000E1F6A2 /* AWSApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E0DAC51DA413D000E1F6A2 /* AWSApiManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		792128D346D9C27EE4B1A5AC /* Pods_IoTSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IoTSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		805EC7A7CC85B93BEF1C38B0 /* Pods-IoTSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-IoTSampleSwift/Pods-IoTSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
+		A62CEE5A1BF3B50800E9C895 /* SubscribeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeViewController.swift; sourceTree = "<group>"; };
+		A6867C931BF530A700956B68 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A6B39BB11BF3A93600045F73 /* IoTSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IoTSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B39BB41BF3A93600045F73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A6B39BB61BF3A93600045F73 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		A6B39BB81BF3A93600045F73 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
+		A6B39BBB1BF3A93600045F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A6B39BBD1BF3A93600045F73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6B39BC01BF3A93600045F73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6B39BC21BF3A93600045F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = IoTSampleSwift/Info.plist; sourceTree = "<group>"; };
+		A6CC2A281BFFCB6F00635393 /* IoTSampleTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IoTSampleTabBarController.swift; sourceTree = "<group>"; };
+		A6E263211C06870D0032B28D /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
+		AA11B2D9F1126974B60CBC12 /* Pods-IoTSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IoTSampleSwift/Pods-IoTSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		E73013871DA3788F00468B1E /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
+		E73013881DA3788F00468B1E /* PinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinTableViewCell.swift; sourceTree = "<group>"; };
+		E73013891DA3788F00468B1E /* PinTableViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinTableViewSource.swift; sourceTree = "<group>"; };
+		E730138E1DA3797900468B1E /* TableViewRefreshProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRefreshProtocol.swift; sourceTree = "<group>"; };
+		E73013901DA38DB400468B1E /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		E73013921DA3E12300468B1E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E7E0DAC51DA413D000E1F6A2 /* AWSApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSApiManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6B39BAE1BF3A93600045F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				238A0E4BFFC4B77AF354449C /* Pods_IoTSampleSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C0920B1FB4086EF6A4466EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				792128D346D9C27EE4B1A5AC /* Pods_IoTSampleSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A62CEE591BF3AEA500E9C895 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6B39BC21BF3A93600045F73 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		A6B39BA81BF3A93600045F73 = {
+			isa = PBXGroup;
+			children = (
+				A6B39BB31BF3A93600045F73 /* IoTSampleSwift */,
+				A6B39BB21BF3A93600045F73 /* Products */,
+				0C0920B1FB4086EF6A4466EE /* Frameworks */,
+				F83EFB2A75AB20AEB2488908 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A6B39BB21BF3A93600045F73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6B39BB11BF3A93600045F73 /* IoTSampleSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6B39BB31BF3A93600045F73 /* IoTSampleSwift */ = {
+			isa = PBXGroup;
+			children = (
+				E73013901DA38DB400468B1E /* AppSettings.swift */,
+				A6B39BB41BF3A93600045F73 /* AppDelegate.swift */,
+				E7E0DAC51DA413D000E1F6A2 /* AWSApiManager.swift */,
+				A6867C931BF530A700956B68 /* Constants.swift */,
+				A6CC2A281BFFCB6F00635393 /* IoTSampleTabBarController.swift */,
+				A6B39BB61BF3A93600045F73 /* ConnectionViewController.swift */,
+				A6B39BB81BF3A93600045F73 /* PinViewController.swift */,
+				A62CEE5A1BF3B50800E9C895 /* SubscribeViewController.swift */,
+				A6E263211C06870D0032B28D /* ConfigurationViewController.swift */,
+				E730138E1DA3797900468B1E /* TableViewRefreshProtocol.swift */,
+				A6B39BBA1BF3A93600045F73 /* Main.storyboard */,
+				E73013881DA3788F00468B1E /* PinTableViewCell.swift */,
+				E73013891DA3788F00468B1E /* PinTableViewSource.swift */,
+				E73013871DA3788F00468B1E /* Pin.swift */,
+				E73013921DA3E12300468B1E /* SwiftyJSON.swift */,
+				A6B39BBD1BF3A93600045F73 /* Assets.xcassets */,
+				A6B39BBF1BF3A93600045F73 /* LaunchScreen.storyboard */,
+				A62CEE591BF3AEA500E9C895 /* Supporting Files */,
+			);
+			path = IoTSampleSwift;
+			sourceTree = "<group>";
+		};
+		F83EFB2A75AB20AEB2488908 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA11B2D9F1126974B60CBC12 /* Pods-IoTSampleSwift.debug.xcconfig */,
+				805EC7A7CC85B93BEF1C38B0 /* Pods-IoTSampleSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6B39BB01BF3A93600045F73 /* IoTSampleSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6B39BC51BF3A93600045F73 /* Build configuration list for PBXNativeTarget "IoTSampleSwift" */;
+			buildPhases = (
+				7251A1111313223CDF637C8B /* [CP] Check Pods Manifest.lock */,
+				A6B39BAD1BF3A93600045F73 /* Sources */,
+				A6B39BAE1BF3A93600045F73 /* Frameworks */,
+				A6B39BAF1BF3A93600045F73 /* Resources */,
+				A02A64AB4014E626347CC0F3 /* [CP] Embed Pods Frameworks */,
+				49C48CE589A34F163E38E6F6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IoTSampleSwift;
+			productName = IoTSampleSwift;
+			productReference = A6B39BB11BF3A93600045F73 /* IoTSampleSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6B39BA91BF3A93600045F73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Amazon;
+				TargetAttributes = {
+					A6B39BB01BF3A93600045F73 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 5UA2F9872A;
+						LastSwiftMigration = 0800;
+					};
+				};
+			};
+			buildConfigurationList = A6B39BAC1BF3A93600045F73 /* Build configuration list for PBXProject "IoTSampleSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A6B39BA81BF3A93600045F73;
+			productRefGroup = A6B39BB21BF3A93600045F73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6B39BB01BF3A93600045F73 /* IoTSampleSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6B39BAF1BF3A93600045F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6B39BC11BF3A93600045F73 /* LaunchScreen.storyboard in Resources */,
+				A6B39BBE1BF3A93600045F73 /* Assets.xcassets in Resources */,
+				A6B39BBC1BF3A93600045F73 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		49C48CE589A34F163E38E6F6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTSampleSwift/Pods-IoTSampleSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7251A1111313223CDF637C8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A02A64AB4014E626347CC0F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IoTSampleSwift/Pods-IoTSampleSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6B39BAD1BF3A93600045F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E73013911DA38DB400468B1E /* AppSettings.swift in Sources */,
+				E730138C1DA3788F00468B1E /* PinTableViewCell.swift in Sources */,
+				E730138D1DA3788F00468B1E /* PinTableViewSource.swift in Sources */,
+				A6867C941BF530A700956B68 /* Constants.swift in Sources */,
+				E73013931DA3E12300468B1E /* SwiftyJSON.swift in Sources */,
+				A6B39BB91BF3A93600045F73 /* PinViewController.swift in Sources */,
+				E730138F1DA3797900468B1E /* TableViewRefreshProtocol.swift in Sources */,
+				E730138B1DA3788F00468B1E /* Pin.swift in Sources */,
+				A62CEE5B1BF3B50800E9C895 /* SubscribeViewController.swift in Sources */,
+				A6B39BB51BF3A93600045F73 /* AppDelegate.swift in Sources */,
+				A6E263221C06870D0032B28D /* ConfigurationViewController.swift in Sources */,
+				A6CC2A291BFFCB6F00635393 /* IoTSampleTabBarController.swift in Sources */,
+				E7E0DAC61DA413D000E1F6A2 /* AWSApiManager.swift in Sources */,
+				A6B39BB71BF3A93600045F73 /* ConnectionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A6B39BBA1BF3A93600045F73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6B39BBB1BF3A93600045F73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A6B39BBF1BF3A93600045F73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6B39BC01BF3A93600045F73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6B39BC31BF3A93600045F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6B39BC41BF3A93600045F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6B39BC61BF3A93600045F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA11B2D9F1126974B60CBC12 /* Pods-IoTSampleSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UA2F9872A;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				INFOPLIST_FILE = IoTSampleSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IoTSampleSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Debug;
+		};
+		A6B39BC71BF3A93600045F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 805EC7A7CC85B93BEF1C38B0 /* Pods-IoTSampleSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5UA2F9872A;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
+				INFOPLIST_FILE = IoTSampleSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = IoTSampleSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 2.3;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6B39BAC1BF3A93600045F73 /* Build configuration list for PBXProject "IoTSampleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6B39BC31BF3A93600045F73 /* Debug */,
+				A6B39BC41BF3A93600045F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6B39BC51BF3A93600045F73 /* Build configuration list for PBXNativeTarget "IoTSampleSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6B39BC61BF3A93600045F73 /* Debug */,
+				A6B39BC71BF3A93600045F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6B39BA91BF3A93600045F73 /* Project object */;
+}
