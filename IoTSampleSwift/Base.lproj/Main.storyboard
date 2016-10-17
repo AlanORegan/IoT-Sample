@@ -87,7 +87,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ie3-VC-s30">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pinCell" rowHeight="45" id="pCp-ru-Dca" customClass="PinTableViewCell" customModule="IoTSampleSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pinCellSw" rowHeight="45" id="pCp-ru-Dca" userLabel="pinCellSw" customClass="PinTableViewCellSw" customModule="IoTSampleSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pCp-ru-Dca" id="CGO-go-nPr">
@@ -112,6 +112,10 @@
                                                         <action selector="pinCellSwitchChanged:" destination="pCp-ru-Dca" eventType="valueChanged" id="Z8u-pw-VL1"/>
                                                     </connections>
                                                 </switch>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Switch32.ico" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-uP-r1a">
+                                                    <frame key="frameInset" minX="26" minY="7" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="ygd-Wj-dUn" firstAttribute="leading" secondItem="JJ7-S1-IVc" secondAttribute="trailing" constant="8" symbolic="YES" id="2dq-nV-Veh"/>
@@ -129,8 +133,90 @@
                                             <outlet property="pinCellSwitch" destination="ThY-DC-ZId" id="zK3-le-BMk"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="pinCellDim" rowHeight="45" id="KmW-Th-Tyb" userLabel="pinCellDim" customClass="PinTableViewCellDim" customModule="IoTSampleSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="73" width="343" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KmW-Th-Tyb" id="Em4-LQ-2dF">
+                                            <frame key="frameInset" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUI-MA-GPH" userLabel="Pin Cell Number">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="afM-sT-xm0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pin Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeu-dZ-XSc" userLabel="Pin Cell Display Name">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="158" id="7Au-tc-PWN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVv-0f-gq5">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="Y0v-c8-udl"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Send"/>
+                                                    <connections>
+                                                        <action selector="pinCellButtonPressed:" destination="KmW-Th-Tyb" eventType="touchUpInside" id="rO3-rh-oDu"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXg-GV-E1R">
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Switch32.ico" translatesAutoresizingMaskIntoConstraints="NO" id="NJE-5Q-mXy">
+                                                    <frame key="frameInset" minX="26" minY="7" width="32" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yeu-dZ-XSc" firstAttribute="centerY" secondItem="IXg-GV-E1R" secondAttribute="centerY" id="DOB-k0-zvg"/>
+                                                <constraint firstItem="yeu-dZ-XSc" firstAttribute="baseline" secondItem="OVv-0f-gq5" secondAttribute="baseline" id="GUz-YV-5dp"/>
+                                                <constraint firstItem="OVv-0f-gq5" firstAttribute="leading" secondItem="IXg-GV-E1R" secondAttribute="trailing" constant="8" symbolic="YES" id="KOj-PE-IZo"/>
+                                                <constraint firstItem="IXg-GV-E1R" firstAttribute="leading" secondItem="yeu-dZ-XSc" secondAttribute="trailing" constant="8" symbolic="YES" id="LDb-Ee-3zD"/>
+                                                <constraint firstItem="yeu-dZ-XSc" firstAttribute="leading" secondItem="pUI-MA-GPH" secondAttribute="trailing" constant="8" symbolic="YES" id="PBo-Iy-s79"/>
+                                                <constraint firstItem="yeu-dZ-XSc" firstAttribute="baseline" secondItem="pUI-MA-GPH" secondAttribute="baseline" id="Qdi-Qo-l1S"/>
+                                                <constraint firstItem="pUI-MA-GPH" firstAttribute="leading" secondItem="Em4-LQ-2dF" secondAttribute="leadingMargin" id="WdC-GS-YLK"/>
+                                                <constraint firstItem="pUI-MA-GPH" firstAttribute="centerY" secondItem="Em4-LQ-2dF" secondAttribute="centerY" id="XeW-ng-BZ4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OVv-0f-gq5" secondAttribute="trailing" constant="6" id="rWj-go-opH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="pinCellButton" destination="OVv-0f-gq5" id="PUp-va-9vQ"/>
+                                            <outlet property="pinCellDisplayNumber" destination="pUI-MA-GPH" id="Bkj-8J-psF"/>
+                                            <outlet property="pinCellName" destination="yeu-dZ-XSc" id="Mal-2F-8D0"/>
+                                            <outlet property="pinCellTime" destination="IXg-GV-E1R" id="TUe-Iw-SbK"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZZ-Et-PwM">
+                                <frame key="frameInset" minX="21" minY="70" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pin Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2T-6L-KEm">
+                                <frame key="frameInset" minX="70" minY="70" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-4z-rFw">
+                                <frame key="frameInset" minX="256" minY="70" width="74" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -268,6 +354,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Switch32.ico" width="32" height="32"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

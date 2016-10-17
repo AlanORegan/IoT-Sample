@@ -1,6 +1,6 @@
 //
-//  pinTableViewCell.swift
-//  RaspMultipin
+//  pinTableViewCellSw.swift
+//  IoT-Sample
 //
 //  Created by Alan O'Regan on 2015/12/12.
 //  Copyright © 2015 Alan O'Regan. All rights reserved.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-typealias CellHandler = (pinNumber: Int, status : Bool) -> Void
-typealias ModelHandler = (setting : String, CellHandler) -> Void
+typealias CellHandlerSw = (pinNumber: Int, status : Bool) -> Void
+typealias ModelHandlerSw = (setting : String, CellHandlerSw) -> Void
 
 
-class PinTableViewCell: UITableViewCell {
+class PinTableViewCellSw: UITableViewCell {
     
     // MARK: Properties
     
-    var modelUpdateHandler : ModelHandler?
+    var modelUpdateHandler : ModelHandlerSw?
     
     var pinCellNumber : Int?
     
@@ -47,7 +47,7 @@ class PinTableViewCell: UITableViewCell {
     
     //Hook up the model update handler delegate
     
-    func modelDelegate(modelHandler : ModelHandler?) {
+    func modelDelegate(modelHandler : ModelHandlerSw?) {
         self.modelUpdateHandler = modelHandler
     }
     

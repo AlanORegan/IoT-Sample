@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+// typealiases used to create interface templates between Cell template class and pin
+//typealias CellHandler = (pinNumber: Int, status : Bool) -> Void
+//typealias ModelHandler = (setting : String, CellHandler) -> Void
+
 class PinTableViewSource : NSObject, UITableViewDataSource {
     
     //MARK: Properties
@@ -61,22 +66,41 @@ class PinTableViewSource : NSObject, UITableViewDataSource {
         
         // Note:  Be sure to replace the argument to dequeueReusableCellWithIdentifier with the actual identifier string ("pinCell") to allow reuse!
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("pinCell", forIndexPath: indexPath) as! PinTableViewCell
+        if (pins[row].pinType == "Switch") {
+            let cell = tableView.dequeueReusableCellWithIdentifier("pinCellSw", forIndexPath: indexPath) as! PinTableViewCellSw
         
-        // set cell's properties
+            // set cell's properties
         
-        cell.pinCellDisplayNumber.text = pins[row].displayName
-        cell.pinCellName.text = pins[row].name
-        cell.pinCellSwitch.setOn(pins[row].status, animated: false)
-        cell.pinCellNumber = pins[row].pinNumber
+            cell.pinCellDisplayNumber.text = pins[row].displayName
+            cell.pinCellName.text = pins[row].name
+            cell.pinCellSwitch.setOn(pins[row].status, animated: false)
+            cell.pinCellNumber = pins[row].pinNumber
         
-        //Hook up the delegate for model updates
+            //Hook up the delegate for model updates
         
-        cell.modelDelegate(pins[row].updatePin)
+            cell.modelDelegate(pins[row].updatePin)
+            
+            return cell
+            
+        } else /* if (pins[row].pinType == "Dimmer") */ {
+            let cell = tableView.dequeueReusableCellWithIdentifier("pinCellDim", forIndexPath: indexPath) as! PinTableViewCellDim
+            
+            // set cell's properties
+            
+            cell.pinCellDisplayNumber.text = pins[row].displayName
+            cell.pinCellName.text = pins[row].name
+            cell.pinCellNumber = pins[row].pinNumber
+            
+            //Hook up the delegate for model updates
+            
+            cell.modelDelegate(pins[row].setPinForTime)
+            
+            return cell
+
+        }
         
         //print("Cell \(row) pin Number \(cell.pinCellNumber.text)\n")
         
-        return cell
     }
     
     //Define a reusable function for handling responses from the multipin API
@@ -97,7 +121,9 @@ class PinTableViewSource : NSObject, UITableViewDataSource {
             
             let status = devicepin.1["pinStatus"].bool!
             
-            let pin = Pin(number: number, name: name, shortName: shortName, status: status)
+            let pinType = devicepin.1["pinType"].stringValue
+            
+            let pin = Pin(number: number, name: name, shortName: shortName, status: status, pinType: pinType)
             
             
             //print("pin Number \(pin.number) pin Name \(pin.name) pin Status \(pin.status) Devicepin \(devicepin)\n")
@@ -118,7 +144,9 @@ class PinTableViewSource : NSObject, UITableViewDataSource {
             let number = Int(devicepin.0)!
             
             if let found = pins.indexOf({$0.pinNumber == number}) {
-                pins[found].status = devicepin.1["pinStatus"].bool!
+                if devicepin.1["pinStatus"] != nil {
+                    pins[found].status = devicepin.1["pinStatus"].bool!
+                }
             }
         }
         
@@ -159,7 +187,11 @@ class PinTableViewSource : NSObject, UITableViewDataSource {
                     pin.status = devicepin.1["pinStatus"].bool!
                 }
                 
-                pins[found] = Pin(number: pin.pinNumber, name: pin.name, shortName: pin.shortName, status: pin.status)
+                if devicepin.1["pinType"] != nil {
+                    pin.pinType = devicepin.1["pinType"].stringValue
+                }
+                
+                pins[found] = Pin(number: pin.pinNumber, name: pin.name, shortName: pin.shortName, status: pin.status, pinType: pin.pinType)
                 
             } else {
                 
@@ -176,9 +208,17 @@ class PinTableViewSource : NSObject, UITableViewDataSource {
                     shortName = devicepin.1["pinShortName"].stringValue
                 }
                 
-                let status = devicepin.1["pinStatus"].bool!
+                var status = false
+                if devicepin.1["pinStatus"] != nil {
+                    status = devicepin.1["pinStatus"].bool!
+                }
                 
-                let pin = Pin(number: number, name: name, shortName: shortName, status: status)
+                var pinType = ""
+                if devicepin.1["pinType"] != nil {
+                    pinType = devicepin.1["pinType"].stringValue
+                }
+                
+                let pin = Pin(number: number, name: name, shortName: shortName, status: status, pinType: pinType)
                 
                 pins.append(pin)
             }
@@ -251,7 +291,9 @@ class PinTableViewSource : NSObject, UITableViewDataSource {
                 
                 let status = devicepin.1["pinStatus"].bool!
                 
-                let pin = Pin(number: number, name: name, shortName: shortName, status: status)
+                let pinType = devicepin.1["pinType"].stringValue
+                
+                let pin = Pin(number: number, name: name, shortName: shortName, status: status, pinType: pinType)
                 
                 
                 //print("pin Number \(pin.number) pin Name \(pin.name) pin Status \(pin.status) Devicepin \(devicepin)\n")

@@ -62,6 +62,22 @@ class AWSApiManager: NSObject {
 //        makeHTTPPostRequest(path, body : body, onCompletion: onCompletion)
     }
     
+    func setPinTime(pinNumber : Int, requestedPinSetting: Int/*, onCompletion: ServiceResponse*/) {
+        
+        //
+        // Initialize the control JSON object
+        //
+        let controlJson = JSON(["state": ["desired": [String(pinNumber):["time": requestedPinSetting]]]])
+        
+        iotDataManager.updateShadow(thingName, jsonString: controlJson.rawString() )
+        operationInProgress = true
+        
+        //        let path : String = sharedAppSettings.baseUrlPin + String(pinNumber) + "/" + requestedPinSetting
+        //        let body : [String: AnyObject] = ["" : ""]
+        //
+        //        makeHTTPPostRequest(path, body : body, onCompletion: onCompletion)
+    }
+    
     func getCallbackAcceptedData(callback:DataCallBack) {
         callbackAcceptedData.insert(callback, atIndex: callbackAcceptedData.count)
         //callbackAcceptedData[0] = callback;

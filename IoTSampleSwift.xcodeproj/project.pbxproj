@@ -19,11 +19,16 @@
 		A6CC2A291BFFCB6F00635393 /* IoTSampleTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC2A281BFFCB6F00635393 /* IoTSampleTabBarController.swift */; };
 		A6E263221C06870D0032B28D /* ConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6E263211C06870D0032B28D /* ConfigurationViewController.swift */; };
 		E730138B1DA3788F00468B1E /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013871DA3788F00468B1E /* Pin.swift */; };
-		E730138C1DA3788F00468B1E /* PinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013881DA3788F00468B1E /* PinTableViewCell.swift */; };
+		E730138C1DA3788F00468B1E /* PinTableViewCellSw.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013881DA3788F00468B1E /* PinTableViewCellSw.swift */; };
 		E730138D1DA3788F00468B1E /* PinTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013891DA3788F00468B1E /* PinTableViewSource.swift */; };
 		E730138F1DA3797900468B1E /* TableViewRefreshProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E730138E1DA3797900468B1E /* TableViewRefreshProtocol.swift */; };
 		E73013911DA38DB400468B1E /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013901DA38DB400468B1E /* AppSettings.swift */; };
 		E73013931DA3E12300468B1E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73013921DA3E12300468B1E /* SwiftyJSON.swift */; };
+		E7895E461DB50F37004725C2 /* Dimmer.ico in Resources */ = {isa = PBXBuildFile; fileRef = E7895E441DB50F37004725C2 /* Dimmer.ico */; };
+		E7895E471DB50F37004725C2 /* Switch.ico in Resources */ = {isa = PBXBuildFile; fileRef = E7895E451DB50F37004725C2 /* Switch.ico */; };
+		E7895E4A1DB5178E004725C2 /* Switch32.ico in Resources */ = {isa = PBXBuildFile; fileRef = E7895E481DB5178E004725C2 /* Switch32.ico */; };
+		E7895E4B1DB5178E004725C2 /* Dimmer32.ico in Resources */ = {isa = PBXBuildFile; fileRef = E7895E491DB5178E004725C2 /* Dimmer32.ico */; };
+		E7AB72481DB4DED700C7AFDA /* PinTableViewCellDim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AB72471DB4DED700C7AFDA /* PinTableViewCellDim.swift */; };
 		E7E0DAC61DA413D000E1F6A2 /* AWSApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E0DAC51DA413D000E1F6A2 /* AWSApiManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,11 +49,16 @@
 		A6E263211C06870D0032B28D /* ConfigurationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationViewController.swift; sourceTree = "<group>"; };
 		AA11B2D9F1126974B60CBC12 /* Pods-IoTSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IoTSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IoTSampleSwift/Pods-IoTSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		E73013871DA3788F00468B1E /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
-		E73013881DA3788F00468B1E /* PinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinTableViewCell.swift; sourceTree = "<group>"; };
+		E73013881DA3788F00468B1E /* PinTableViewCellSw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinTableViewCellSw.swift; sourceTree = "<group>"; };
 		E73013891DA3788F00468B1E /* PinTableViewSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinTableViewSource.swift; sourceTree = "<group>"; };
 		E730138E1DA3797900468B1E /* TableViewRefreshProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRefreshProtocol.swift; sourceTree = "<group>"; };
 		E73013901DA38DB400468B1E /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		E73013921DA3E12300468B1E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E7895E441DB50F37004725C2 /* Dimmer.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = Dimmer.ico; sourceTree = "<group>"; };
+		E7895E451DB50F37004725C2 /* Switch.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = Switch.ico; sourceTree = "<group>"; };
+		E7895E481DB5178E004725C2 /* Switch32.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = Switch32.ico; sourceTree = "<group>"; };
+		E7895E491DB5178E004725C2 /* Dimmer32.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = Dimmer32.ico; sourceTree = "<group>"; };
+		E7AB72471DB4DED700C7AFDA /* PinTableViewCellDim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinTableViewCellDim.swift; sourceTree = "<group>"; };
 		E7E0DAC51DA413D000E1F6A2 /* AWSApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AWSApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +85,10 @@
 		A62CEE591BF3AEA500E9C895 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7895E481DB5178E004725C2 /* Switch32.ico */,
+				E7895E491DB5178E004725C2 /* Dimmer32.ico */,
+				E7895E441DB50F37004725C2 /* Dimmer.ico */,
+				E7895E451DB50F37004725C2 /* Switch.ico */,
 				A6B39BC21BF3A93600045F73 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -113,7 +127,8 @@
 				A6E263211C06870D0032B28D /* ConfigurationViewController.swift */,
 				E730138E1DA3797900468B1E /* TableViewRefreshProtocol.swift */,
 				A6B39BBA1BF3A93600045F73 /* Main.storyboard */,
-				E73013881DA3788F00468B1E /* PinTableViewCell.swift */,
+				E73013881DA3788F00468B1E /* PinTableViewCellSw.swift */,
+				E7AB72471DB4DED700C7AFDA /* PinTableViewCellDim.swift */,
 				E73013891DA3788F00468B1E /* PinTableViewSource.swift */,
 				E73013871DA3788F00468B1E /* Pin.swift */,
 				E73013921DA3E12300468B1E /* SwiftyJSON.swift */,
@@ -196,7 +211,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6B39BC11BF3A93600045F73 /* LaunchScreen.storyboard in Resources */,
+				E7895E4A1DB5178E004725C2 /* Switch32.ico in Resources */,
+				E7895E461DB50F37004725C2 /* Dimmer.ico in Resources */,
 				A6B39BBE1BF3A93600045F73 /* Assets.xcassets in Resources */,
+				E7895E471DB50F37004725C2 /* Switch.ico in Resources */,
+				E7895E4B1DB5178E004725C2 /* Dimmer32.ico in Resources */,
 				A6B39BBC1BF3A93600045F73 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E73013911DA38DB400468B1E /* AppSettings.swift in Sources */,
-				E730138C1DA3788F00468B1E /* PinTableViewCell.swift in Sources */,
+				E730138C1DA3788F00468B1E /* PinTableViewCellSw.swift in Sources */,
 				E730138D1DA3788F00468B1E /* PinTableViewSource.swift in Sources */,
 				A6867C941BF530A700956B68 /* Constants.swift in Sources */,
 				E73013931DA3E12300468B1E /* SwiftyJSON.swift in Sources */,
@@ -270,6 +289,7 @@
 				A6CC2A291BFFCB6F00635393 /* IoTSampleTabBarController.swift in Sources */,
 				E7E0DAC61DA413D000E1F6A2 /* AWSApiManager.swift in Sources */,
 				A6B39BB71BF3A93600045F73 /* ConnectionViewController.swift in Sources */,
+				E7AB72481DB4DED700C7AFDA /* PinTableViewCellDim.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,13 +20,17 @@ class Pin {
     
     var displayName : String
     
+    var pinType : String
+    
     var status : Bool
     
-    var cellHandler : CellHandler?
+    var cellHandlerSw : CellHandlerSw?
     
+    var cellHandlerDim : CellHandlerDim?
+
     // MARK: Initiaitalizers
     
-    init(number: Int, name : String, shortName : String, status : Bool) {
+    init(number: Int, name : String, shortName : String, status : Bool, pinType : String) {
         
         //initialise stored properties
         
@@ -34,6 +38,7 @@ class Pin {
         self.name = name
         self.shortName = shortName
         self.status = status
+        self.pinType = pinType
         
         if sharedAppSettings.pinsDisplayName == "pinNumber" {
             self.displayName = String(number)
@@ -51,18 +56,22 @@ class Pin {
         self.shortName = ""
         self.status = true
         self.displayName = ""
+        self.pinType = ""
     }
     
-    func updatePin(requestedPinSetting: String, cellHandler : CellHandler) {
+    //
+    //Handle updates to Switches
+    //
+    func updatePin(requestedPinSetting: String, cellHandler : CellHandlerSw) {
         
-        self.cellHandler = cellHandler
+        self.cellHandlerSw = cellHandler
         
 //        RestApiManager.sharedInstance.setPinStatus(self.pinNumber, requestedPinSetting: requestedPinSetting, onCompletion: handlePinResponse)
         print("\(requestedPinSetting)")
         
         //let iotDataManager = AWSIoTDataManager.defaultIoTDataManager()
         
-        AWSApiManager.sharedInstance.iotDataManager.publishString("\(requestedPinSetting)", onTopic:thingName, qoS:.MessageDeliveryAttemptedAtMostOnce)
+        //AWSApiManager.sharedInstance.iotDataManager.publishString("\(requestedPinSetting)", onTopic:thingName, qoS:.MessageDeliveryAttemptedAtMostOnce)
         
         
         if (!AWSApiManager.sharedInstance.operationInProgress)
@@ -73,12 +82,39 @@ class Pin {
         else
         {
             dispatch_async(dispatch_get_main_queue(), {
-                self.cellHandler!(pinNumber: self.pinNumber, status: self.status)})    // cancel the operation
+                self.cellHandlerSw!(pinNumber: self.pinNumber, status: self.status)})    // cancel the operation
             print("Switch operation cancelled")
         }
 
     }
     
+    //
+    //Handle updates to Dimmers
+    //
+    func setPinForTime(requestedPinTime: Int, cellHandler : CellHandlerDim) {
+        
+        self.cellHandlerDim = cellHandler
+        
+        print("Requesting pin \(self.pinNumber) for time \(requestedPinTime)")
+        
+        //let iotDataManager = AWSIoTDataManager.defaultIoTDataManager()
+        
+        // AWSApiManager.sharedInstance.iotDataManager.publishString("\(requestedPinTime)", onTopic:thingName, qoS:.MessageDeliveryAttemptedAtMostOnce)
+        
+        if (!AWSApiManager.sharedInstance.operationInProgress)
+        {
+            AWSApiManager.sharedInstance.setPinTime(pinNumber, requestedPinSetting: requestedPinTime)
+//            self.status = ("on" == requestedPinSetting)
+        }
+        else
+        {
+            dispatch_async(dispatch_get_main_queue(), {
+                self.cellHandlerDim!(pinNumber: self.pinNumber, status: self.status)})    // cancel the operation
+            print("Switch operation cancelled")
+        }
+        
+    }
+
     private func handlePinResponse(path : String, callType : String, data : NSData?, response : NSURLResponse?, error: NSError?) -> Void {
         
         // Check for an error response form the API call
@@ -123,7 +159,7 @@ class Pin {
             // reset the switch value because the call failed
             
             dispatch_async(dispatch_get_main_queue(), {
-                self.cellHandler!(pinNumber: self.pinNumber, status: self.status)})
+                self.cellHandlerSw!(pinNumber: self.pinNumber, status: self.status)})
             
         case "ok":
             
